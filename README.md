@@ -29,7 +29,7 @@ curl 'https://api.peoplebox.ai/accounts/<account-id>/employees/<employee-id>/goa
 
 Params
 | Param         | Info           |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | account_id    | Account Id, obtained from get_user_details |
 | employee_id   | Id of the currently logged in user, obtained from get_user_details      |
 | goal_id | You can get the goal id by logging into peoplebox and clicking on a specific goal. Use the goal ID in the URL |
@@ -48,7 +48,7 @@ curl 'https://api.peoplebox.ai/accounts/<your-account-id>/employees/<your-employ
 **Query Params**
 
 | Param         | Info           |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | account_id    | Account Id, obtained from get_user_details |
 | employee_id   | Id of the currently logged in user, obtained from get_user_details      |
 | goal_id | You can get the goal id by logging into peoplebox and clicking on a specific goal. Use the goal ID in the URL |
