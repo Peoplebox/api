@@ -12,16 +12,60 @@ Get the `api_token` by emailing support@peoplebox.ai for now. Once you get the `
 ## Get User Details
 
 ```
-curl 'https://api.peoplebox.ai/users/get_user_details.json' \
+curl 'https://api.peoplebox.ai/users/get_user_details.json?api_token=XXX' \
    -H 'Accept: application/json, text/plain, */*' \
    -H 'Content-Type: application/json;charset=UTF-8' \
 ```
 
 Get all information about the user for whome the `api_token` has been generated
 
+
+## Get 1-on-1 Analytics
+
+```
+curl 'https://api.peoplebox.ai/accounts/32/homepage_analytics/get_homepage_insight?insight_type=one_on_one_meetings_analytics&time_filter=last_30_days&api_token=XXX' \
+   -H 'Accept: application/json, text/plain, */*' \
+   -H 'Content-Type: application/json;charset=UTF-8' \
+```
+**Params**
+| Param         | Info           |
+| ------------- |-------------|
+| account_id    | Account Id, obtained from get_user_details |
+| time_filter | Time range you want the data for `this_month,last_month,last_30_days,last_90_days,last_180_days,last_365_days,current_quarter,previous_quarter,current_year,previous_year`|
+
+
+**Response**
+```
+[
+  {
+    "employee": {
+      "id": 11842,
+      "full_name": "Alba"
+    },
+    "direct_reports": 27,
+    "time_since_last": -32,
+    "unique_with_reports": 23,
+    "talking_points_added": 7,
+    "action_items_added": 5
+  },
+  {
+    "employee": {
+      "id": 13567,
+      "full_name": "Bianka"
+    },
+    "direct_reports": 24,
+    "time_since_last": -2,
+    "unique_with_reports": 2,
+    "talking_points_added": 0,
+    "action_items_added": 0
+  }
+ ]
+```
+
+
 ## Get Goal Information
 ```
-curl 'https://api.peoplebox.ai/accounts/<account-id>/employees/<employee-id>/goals/<goal-id>' \
+curl 'https://api.peoplebox.ai/accounts/<account-id>/employees/<employee-id>/goals/<goal-id>?api_token=XXX' \
    -H 'Accept: application/json, text/plain, */*' \
    -H 'Content-Type: application/json;charset=UTF-8' \
 ```
