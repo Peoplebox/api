@@ -5,7 +5,8 @@ This documentation covers how you can use the Peoplebox API
 Hey there! Peoplebox API is not publicly available yet, but if you are interested we can give you an API token for your account to try it out.
 
 # Authentication
-Get the `api_token` by emailing support@peoplebox.ai for now. Once you get the `api_token`,  pass it as a query paramter `?api_token=XXXX` along with all requests
+Get the `api_token` by emailing support@peoplebox.ai for now. Once you get the `api_token`,  pass it as a query paramter `?api_token=XXXX` along with all requests.
+Remember, this `api_token` is for your login and doesn't have any authorization limits. So anything and everything that can be done with your account can be done with this api_token. So please don't share and use it carefully.
 
 # API Documentation
 
@@ -21,7 +22,6 @@ Get all information about the user for whome the `api_token` has been generated
 
 
 ## Get 1-on-1 Analytics
-
 ```
 curl 'https://api.peoplebox.ai/accounts/32/homepage_analytics/get_homepage_insight?insight_type=one_on_one_meetings_analytics&time_filter=last_30_days&api_token=XXX' \
    -H 'Accept: application/json, text/plain, */*' \
