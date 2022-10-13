@@ -109,7 +109,10 @@ curl 'https://api.peoplebox.ai/accounts/<your-account-id>/employees/<your-employ
 }
 ```
 
-## Deactivate an employees
+## Deactivate an employee
+
+An employee gets deactivated when a date_of_exit is set for them. You can hit the udpate API to set the date_of_exit for the employee.
+
 ```
 curl https://api.peoplebox.ai/accounts/<your-account-id>/employees/<employee-id>/update_employees
   --data-binary '{"emp_id":<employee-id>,"employee":{"date_of_exit":"2022-10-13T10:59:28.875Z"}}'
