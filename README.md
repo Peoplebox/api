@@ -108,3 +108,9 @@ curl 'https://api.peoplebox.ai/accounts/<your-account-id>/employees/<your-employ
     }
 }
 ```
+
+## Deactivate an employees
+```
+curl https://api.peoplebox.ai/accounts/<your-account-id>/employees/<employee-id>/update_employees
+  --data-binary '{"emp_id":<employee-id>,"employee":{"date_of_exit":"2022-10-13T10:59:28.875Z"}}'
+```
